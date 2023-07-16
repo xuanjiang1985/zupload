@@ -1,0 +1,7 @@
+App: zupload
+Version: v0.0.1
+Env: dev
+
+DataBase:
+  Sqlite3: 
+    DBName: "D:\\Program Files\\go_projects\\zupload\\file.db"
