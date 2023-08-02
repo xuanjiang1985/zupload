@@ -1,6 +1,6 @@
 App: zupload
 Version: v0.0.1
-Env: dev
+Env: dev # dev | test | prod
 
 DataBase:
   Sqlite3: 

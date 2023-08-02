@@ -13,12 +13,20 @@ import (
 	"github.com/tidwall/pretty"
 )
 
+type Env string
+
+const (
+	EnvDev  Env = "dev"
+	EnvTest Env = "test"
+	EnvProd Env = "prod"
+)
+
 var Conf = new(Config)
 
 type Config struct {
 	App      string
 	Version  string
-	Env      string
+	Env      Env
 	DataBase DataBase
 }
 

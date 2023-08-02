@@ -16,7 +16,7 @@ func TestCreateOne(t *testing.T) {
 	fileRepo := NewFileRpo()
 
 	id, err := fileRepo.CreateOne(&model.File{
-		FileName:  "zhougang6",
+		FileName:  "zhougang8",
 		CreatedAt: time.Now().Unix(),
 	})
 
