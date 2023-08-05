@@ -1,1 +1,28 @@
-.hello {color: grey;}
+.add-file {
+    position: absolute;
+    top: 4%;
+    right: 8%;
+    font-size: 7vw;
+    line-height: 5vw;
+    text-align: center;
+    height: 5vw;
+    width: 5vw;
+    padding: 4vw;
+    border-radius: 50%;
+    background-color: #8BC34A;
+}
+
+#file-input {
+    display: none;
+}
+
+progress {
+    width: 70%;
+}
+
+.line {
+    padding: 2vw;
+    margin-bottom: 3vw;
+    border-radius: 1vw;
+    background-color: #ecf8e0;
+}

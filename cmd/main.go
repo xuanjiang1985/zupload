@@ -7,6 +7,7 @@ import (
 	"io/fs"
 	"log"
 	"net/http"
+	"os"
 	"zupload/config"
 
 	"github.com/gin-gonic/gin"
@@ -44,6 +45,22 @@ func main() {
 
 	app.GET("/", func(c *gin.Context) {
 		c.FileFromFS("/", http.FS(frontTmpl))
+	})
+
+	app.POST("/upload", func(c *gin.Context) {
+		f, _ := c.FormFile("file")
+		fmt.Println(f.Filename)
+		if err := c.SaveUploadedFile(f, conf.Store.FilePath+string(os.PathSeparator)+f.Filename); err != nil {
+			c.JSON(200, gin.H{
+				"code": 10021,
+				"msg":  err.Error(),
+			})
+			return
+		}
+		c.JSON(200, gin.H{
+			"code": 0,
+			"msg":  "ok",
+		})
 	})
 
 	fmt.Println("open http site 127.0.0.1:8283")

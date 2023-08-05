@@ -8,7 +8,23 @@
     <link href="/static/assets/index.css" rel="stylesheet">
 </head>
 <body>
-    <h1 class="hello">hello world</h1>
+    <div class="add-file">+</div>
+    <input type="file" name="file" id="file-input">
+    <div>
+        <div class="line">
+            <div id="filename">filename</div>
+            <div>
+                <progress id="progressvens" value= '0'  max= '100' ></progress>  
+            </div>
+        </div>
+        <div class="line">
+            <div>filename2</div>
+            <div>
+                <progress value= '1'  max= '100' ></progress>  
+            </div>
+        </div>
+    </div>
+    <script src="/static/assets/jq-3.7.0.min.js"></script>
     <script src="/static/assets/index.js"></script>
 </body>
 </html>

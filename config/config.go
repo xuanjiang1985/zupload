@@ -28,6 +28,7 @@ type Config struct {
 	Version  string
 	Env      Env
 	DataBase DataBase
+	Store    Store
 }
 
 type DataBase struct {
@@ -36,6 +37,10 @@ type DataBase struct {
 
 type Sqlite3 struct {
 	DBName string
+}
+
+type Store struct {
+	FilePath string
 }
 
 func InitConfig(path string) (*Config, error) {

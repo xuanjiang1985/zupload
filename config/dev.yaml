@@ -4,4 +4,7 @@ Env: dev # dev | test | prod
 
 DataBase:
   Sqlite3: 
-    DBName: "D:\\Program Files\\go_projects\\zupload\\file.db"
+    DBName: "D:\\Program Files\\go_projects\\zupload\\files\\file.db"
+
+Store:
+  FilePath: "D:\\Program Files\\go_projects\\zupload\\files"
